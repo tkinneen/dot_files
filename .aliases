@@ -1,0 +1,31 @@
+# Useful Aliases
+
+alias la='ls -Al'     # show hidden files
+alias ll='ls -l'     # long listing
+alias l='ls -hF --color'     # quick listing
+
+alias mv='mv -i'
+
+#Timestamps
+alias stamp='date "+%Y%m%d%a%H%M"'
+alias da='date "+%Y-%m-%d %A    %T %Z"'
+
+#show most popular commands
+alias top-commands='history | awk "{print $2}" | awk "BEGIN {FS="|"} {print
+$1}" |sort|uniq -c | sort -rn | head -10'
+
+# Empties trash
+alias trash="rm -fr ~/.Trash"
+
+# Runs last command with sudo
+#alias please="sudo !!"
+alias please='sudo $(history -p !!)'
+
+# Makes backing out of directories easter
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+
